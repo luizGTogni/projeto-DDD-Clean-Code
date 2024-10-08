@@ -1,9 +1,9 @@
 import { left, right, type Either } from '@/core/either';
+import { NotAllowedError } from '../../../../core/errors/errors/not-allowed-error';
+import { ResourceNotFoundError } from '../../../../core/errors/errors/resource-not-found';
 import type { Question } from '../../enterprise/entities/question';
 import type { AnswersRepository } from '../repositories/answers-repository';
 import type { QuestionsRepository } from '../repositories/questions-repository';
-import { NotAllowedError } from './errors/not-allowed-error';
-import { ResourceNotFoundError } from './errors/resource-not-found';
 
 interface ChooseQuestionBestAnswerUseCaseRequest {
   authorId: string;
